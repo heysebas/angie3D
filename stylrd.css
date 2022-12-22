@@ -1,0 +1,104 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.conteiner{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px;
+    background-color: black;
+}
+
+.lado{
+    height: 300px;
+    width: 300px;
+    animation: girar 4s linear infinite ;
+    position: absolute;
+    
+    background-color: brown;
+    
+}
+
+@keyframes girar {
+    from{
+        transform:  rotateY(360deg) translateZ(150px);
+        z-index: 10;
+    }
+
+    50%{
+        z-index: -10;
+    }
+    to{
+        transform:  rotateY(0) translateZ(150px);
+        z-index: 10;
+    }
+}
+
+
+
+#lado_d{
+    background-image: url(img/a.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+#lado_c{
+    background-image: url(img/b.png);
+    background-size: cover;
+    background-position: center;
+    animation-delay: -1s;
+}
+
+#lado_b{
+    background-image: url(img/c.png);
+    background-size: cover;
+    background-position: center;
+    animation-delay: -2s;
+}
+
+
+
+#lado_a{
+    background-image: url(img/d.png);
+    background-size: cover;
+    background-position: center;
+    animation-delay: -3s;
+}
+
+
+
+
+.lado_2{
+    height: 300px;
+    width: 300px;
+    animation: girar_2 4s linear infinite;
+    position: absolute;
+}
+
+@keyframes girar_2{
+    from{
+        transform: rotateY(360deg) rotateX(90deg);
+
+    }
+    to{
+        transform: rotateY(0deg) rotateX(90deg);
+    }
+}
+
+/* #lado_e{
+    background-color: aliceblue;
+    margin-bottom: 300px;
+}
+
+#lado_f{
+    background-color: aliceblue;
+    margin-top: 300px;
+} */
